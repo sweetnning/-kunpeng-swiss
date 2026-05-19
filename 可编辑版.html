@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鲲鹏 IP 品牌战略 · 可编辑版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@200;300;400;500;700;900&family=Archivo:wght@400;500;600;700;800&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fafaf8; --ink:#0a0a0a; --accent:#002FA7; --accent-on:#fff;
+  --grey-1:#f0f0ee; --grey-2:#d4d4d2; --grey-3:#737373;
+  --sans:"Inter","Noto Sans SC",system-ui,sans-serif;
+  --mono:"SF Mono","Consolas",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:#1a1a1a;overflow:hidden;height:100vh;width:100vw}
+
+/* ═══ EDITOR CHROME ═══ */
+#toolbar{position:fixed;top:0;left:0;right:0;height:44px;background:#1a1a2e;display:flex;align-items:center;gap:8px;padding:0 12px;z-index:1000;border-bottom:1px solid rgba(255,255,255,.1)}
+#toolbar button{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#ccc;padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;font-family:var(--sans);transition:.15s}
+#toolbar button:hover{background:rgba(255,255,255,.15);color:#fff}
+#toolbar button.accent{background:var(--accent);border-color:var(--accent);color:#fff}
+#toolbar .spacer{flex:1}
+#toolbar .info{color:rgba(255,255,255,.5);font-size:11px}
+
+/* ═══ DECK ═══ */
+#deck{position:fixed;top:44px;left:0;right:0;bottom:0;display:flex;transition:transform .6s cubic-bezier(.77,0,.175,1);will-change:transform}
+.slide{width:100vw;height:calc(100vh - 44px);flex:0 0 100vw;position:relative;padding:5vh 5vw;display:flex;flex-direction:column;overflow:hidden}
+.slide.accent{background:var(--accent);color:var(--accent-on)}
+.slide.light{background:var(--paper);color:var(--ink)}
+.slide.grey{background:var(--grey-1);color:var(--ink)}
+
+/* ═══ NAV ═══ */
+#nav{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:1000}
+#nav .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:.2s}
+#nav .dot.active{background:var(--accent);width:24px;border-radius:4px}
+#sidebar{position:fixed;right:0;top:44px;bottom:0;width:160px;background:rgba(0,0,0,.85);border-left:1px solid rgba(255,255,255,.08);overflow-y:auto;z-index:999;display:none;padding:8px}
+#sidebar .thumb{width:100%;aspect-ratio:16/9;background:rgba(255,255,255,.06);margin-bottom:8px;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,.4);transition:.15s}
+#sidebar .thumb:hover{background:rgba(255,255,255,.12);color:#fff}
+#sidebar .thumb.active{border:2px solid var(--accent)}
+
+/* ═══ SLIDE EDIT LAYER ═══ */
+.slide-edit-layer{position:absolute;inset:0;z-index:10;pointer-events:none}
+.slide-edit-layer [data-slide-object]{pointer-events:auto;position:absolute;cursor:move;min-width:60px;min-height:24px;padding:6px 10px;border:1px solid transparent;border-radius:4px;transition:border-color .15s}
+.slide-edit-layer [data-slide-object]:hover{border-color:var(--accent)}
+.slide-edit-layer [data-slide-object].selected{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:1px}
+
+/* ═══ CONTENT TEXT ═══ */
+h1{font-weight:200;font-size:min(5.5vw,10vh);line-height:.94;letter-spacing:-.025em}
+h2{font-weight:300;font-size:min(3vw,5.5vh);line-height:1.06}
+h3{font-weight:500;font-size:max(15px,1.2vw)}
+.t-meta{font-family:var(--mono);font-size:max(9px,.58vw);color:var(--grey-3);letter-spacing:.12em;text-transform:uppercase}
+.t-lead{font-size:max(15px,1.1vw);line-height:1.65;color:#525252;font-weight:300}
+.slide.accent .t-lead{color:rgba(255,255,255,.82)}
+.slide.accent .t-meta{color:rgba(255,255,255,.6)}
+.rule{width:100%;height:1px;background:var(--grey-2);margin:0}
+.rule.accent{background:var(--accent);height:2px}
+.card{background:var(--grey-1);padding:24px}
+.card h4{font-weight:500;font-size:max(14px,.9vw);margin-bottom:8px}
+
+/* ═══ RESIZE HANDLES ═══ */
+[data-slide-object] .handle{position:absolute;width:8px;height:8px;background:var(--accent);border-radius:1px;display:none}
+[data-slide-object].selected .handle{display:block}
+.handle.nw{top:-4px;left:-4px;cursor:nw-resize}
+.handle.ne{top:-4px;right:-4px;cursor:ne-resize}
+.handle.sw{bottom:-4px;left:-4px;cursor:sw-resize}
+.handle.se{bottom:-4px;right:-4px;cursor:se-resize}
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button onclick="prev()" title="上一页">←</button>
+  <button onclick="next()" title="下一页">→</button>
+  <button onclick="addText()">+ 文字</button>
+  <button onclick="delSelected()">删除选中</button>
+  <button onclick="undo()">↩ 撤销</button>
+  <button onclick="redo()">↪ 重做</button>
+  <span class="spacer"></span>
+  <button onclick="toggleSidebar()">📄 页面</button>
+  <button class="accent" onclick="exportHTML()">导出 HTML</button>
+  <span class="info" id="pageInfo">1 / 30</span>
+</div>
+
+<div id="deck">
+<!-- ═══ SLIDES LOADED VIA JS ═══ -->
+</div>
+
+<div id="nav"></div>
+<div id="sidebar"></div>
+
+<script>
+// ═══ SLIDE DATA ═══
+const slidesData = [
+  {bg:'accent', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'SHENZHEN SCIENCE & TECHNOLOGY MUSEUM',style:'t-meta'},
+    {type:'text',x:'5vw',y:'15vh',text:'鲲鹏 IP 品牌战略',style:'h1'},
+    {type:'text',x:'5vw',y:'42vh',text:'从"一个馆"到"一个品牌生态"',style:'t-lead'},
+    {type:'text',x:'5vw',y:'50vh',text:'2026年5月 · 18个月 · 8个工作组 · 31项执行条目',style:'t-meta'},
+  ]},
+  {bg:'grey', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'CONTENTS · 目录',style:'t-meta'},
+    {type:'text',x:'5vw',y:'12vh',text:'八段结构',style:'h2'},
+    {type:'text',x:'5vw',y:'28vh',text:'01 背景与定位        02 品牌世界观\n03 产品体系            04 渠道与商业\n05 品牌输出            06 组织与分工\n07 治理与保障         08 时间线',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'01  BACKGROUND',style:'t-meta'},
+    {type:'text',x:'5vw',y:'12vh',text:'不是"又一个科技馆"',style:'h1'},
+    {type:'text',x:'5vw',y:'38vh',text:'深圳创新精神的物化载体\n中国科技馆的南方范式\n文化符号——鲲鹏',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'01  BACKGROUND',style:'t-meta'},
+    {type:'text',x:'5vw',y:'10vh',text:'三层价值金字塔',style:'h2'},
+    {type:'text',x:'5vw',y:'28vh',text:'顶层 · 城市精神象征 · "深圳的文化名片"\n中层 · 科技创新认证 · "这里代表深圳科技"\n底层 · 科普教育入口 · "从一次性打卡到反复回访"',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'01  BACKGROUND',style:'t-meta'},
+    {type:'text',x:'5vw',y:'10vh',text:'构建品牌话语体系',style:'h2'},
+    {type:'text',x:'5vw',y:'20vh',text:'从碎片化表达到统一叙事',style:'t-lead'},
+    {type:'text',x:'5vw',y:'32vh',text:'核心产出：《品牌叙事手册》\n品牌宣言 / 关键词库100+词条 / "破茧→展翅→巡宇"三重叙事',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'01  BACKGROUND',style:'t-meta'},
+    {type:'text',x:'5vw',y:'10vh',text:'从破茧到巡宇——18个月的三幕剧',style:'h2'},
+    {type:'text',x:'5vw',y:'28vh',text:'破茧 2026.05-08 · 鲲鹏号苏醒 · 从零到一\n展翅 2026.09-2027.02 · 知识域解锁 · 内容落地\n巡宇 2027.03-10 · 品牌之夜 · 成熟运营',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'02  WORLDVIEW',style:'t-meta'},
+    {type:'text',x:'5vw',y:'12vh',text:'鲲鹏从哪里来',style:'h1'},
+    {type:'text',x:'5vw',y:'38vh',text:'从宇宙深处坠落深圳光明，沉睡百年\n被城市创新能量唤醒——不是船选择了城市\n小科小探登船，科学宠物等待激活',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'02  WORLDVIEW',style:'t-meta'},
+    {type:'text',x:'5vw',y:'10vh',text:'角色体系',style:'h2'},
+    {type:'text',x:'5vw',y:'24vh',text:'小科 · 指令长 · 科学精神代表\n小探 · 领航员 · 科学家精神代表\n鲲鹏号 · 大飞船 · 承载平台\n科学宠物 · 四个伙伴 · 四种人格',style:'t-lead'},
+  ]},
+  {bg:'light', content:[
+    {type:'text',x:'5vw',y:'3vh',text:'03  PRODUCT',style:'t-meta'},
+    {type:'text',x:'5vw',y:'10vh',text:'让每个产品都讲一个鲲鹏故事',style:'h2'},
+    {type:'text',x:'5vw',y:'28vh',text:'引流款 · 高颜值强传播 · 徽章/钥匙扣/帆布袋\n利润款 · 有科普含量 · 实验套装/AR绘本\n形象款 · 品牌高度 · 艺术家联名/限量礼盒',style:'t-lead'},
+  ]},
+  {bg:'accent', content:[
+    {type:'text',x:'5vw',y:'30vh',text:'鲲鹏由深圳起，驶向宇宙。',style:'h1'},
+    {type:'text',x:'5vw',y:'55vh',text:'深圳科技馆（光明新馆）· 鲲鹏IP品牌战略 · 2026年5月',style:'t-meta'},
+  ]},
+];
+
+// ═══ RENDER ═══
+const deck=document.getElementById('deck');
+const nav=document.getElementById('nav');
+const sidebar=document.getElementById('sidebar');
+let currentIdx=0;
+let history=[], historyPos=-1;
+let selectedId=null;
+let nextOid=1;
+
+function init(){
+  deck.innerHTML='';
+  nav.innerHTML='';
+  sidebar.innerHTML='';
+  slidesData.forEach((sd,i)=>{
+    // Slide
+    const slide=document.createElement('div');
+    slide.className='slide '+sd.bg;
+    slide.dataset.idx=i;
+    // Edit layer
+    const layer=document.createElement('div');
+    layer.className='slide-edit-layer';
+    sd.content.forEach(c=>{
+      const el=document.createElement('div');
+      el.setAttribute('data-slide-object','');
+      el.setAttribute('data-oid',nextOid++);
+      el.style.left=c.x; el.style.top=c.y;
+      el.style.maxWidth='85vw';
+      el.textContent=c.text;
+      if(c.style==='h1'){el.style.fontSize='min(5.5vw,10vh)';el.style.fontWeight='200';el.style.lineHeight='.94'}
+      else if(c.style==='h2'){el.style.fontSize='min(3vw,5.5vh)';el.style.fontWeight='300'}
+      else if(c.style==='t-meta'){el.style.fontSize='max(9px,.58vw)';el.style.color='var(--grey-3)';el.style.fontFamily='var(--mono)'}
+      else if(c.style==='t-lead'){el.style.fontSize='max(15px,1.1vw)';el.style.lineHeight='1.65';el.style.fontWeight='300'}
+      if(sd.bg==='accent'){el.style.color='#fff'}
+      el.onmousedown=e=>{if(e.target===el){select(el); dragStart(e,el)}};
+      // Handles
+      ['nw','ne','sw','se'].forEach(pos=>{const h=document.createElement('div');h.className='handle '+pos;el.appendChild(h)});
+      layer.appendChild(el);
+    });
+    slide.appendChild(layer);
+    deck.appendChild(slide);
+
+    // Nav dot
+    const dot=document.createElement('div');
+    dot.className='dot'+(i===0?' active':'');
+    dot.onclick=()=>go(i);
+    nav.appendChild(dot);
+
+    // Sidebar thumb
+    const thumb=document.createElement('div');
+    thumb.className='thumb'+(i===0?' active':'');
+    thumb.textContent=(i+1);
+    thumb.onclick=()=>go(i);
+    sidebar.appendChild(thumb);
+  });
+  updateInfo();
+}
+init();
+
+// ═══ NAVIGATION ═══
+function go(i){
+  if(i<0||i>=slidesData.length)return;
+  currentIdx=i;
+  deck.style.transform=`translateX(-${i*100}vw)`;
+  document.querySelectorAll('#nav .dot').forEach((d,j)=>d.classList.toggle('active',j===i));
+  document.querySelectorAll('#sidebar .thumb').forEach((t,j)=>t.classList.toggle('active',j===i));
+  updateInfo();
+}
+function prev(){go(currentIdx-1)}
+function next(){go(currentIdx+1)}
+function updateInfo(){document.getElementById('pageInfo').textContent=`${currentIdx+1} / ${slidesData.length}`}
+
+// ═══ SELECTION ═══
+function select(el){
+  document.querySelectorAll('[data-slide-object].selected').forEach(e=>e.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedId=el.dataset.oid;
+}
+document.addEventListener('click',e=>{if(!e.target.closest('[data-slide-object]')){document.querySelectorAll('[data-slide-object].selected').forEach(e=>e.classList.remove('selected'));selectedId=null}});
+
+// ═══ DRAG ═══
+let dragEl=null, dragOX=0, dragOY=0, dragSX=0, dragSY=0;
+function dragStart(e,el){dragEl=el;dragOX=e.clientX;dragOY=e.clientY;dragSX=parseInt(el.style.left)||0;dragSY=parseInt(el.style.top)||0}
+document.addEventListener('mousemove',e=>{if(!dragEl)return;const dx=e.clientX-dragOX,dy=e.clientY-dragOY;dragEl.style.left=(dragSX+dx)+'px';dragEl.style.top=(dragSY+dy)+'px'});
+document.addEventListener('mouseup',()=>{if(dragEl)saveState();dragEl=null});
+
+// ═══ ADD / DELETE ═══
+function addText(){
+  const slide=deck.children[currentIdx];
+  const layer=slide.querySelector('.slide-edit-layer');
+  const el=document.createElement('div');
+  el.setAttribute('data-slide-object','');
+  el.setAttribute('data-oid',nextOid++);
+  el.style.left='10vw';el.style.top='40vh';
+  el.style.fontSize='max(16px,1.2vw)';
+  el.textContent='双击编辑文字';
+  el.contentEditable='true';
+  el.onmousedown=e=>{e.stopPropagation();select(el)};
+  el.ondblclick=()=>{el.contentEditable='true';el.focus()};
+  el.onblur=()=>{el.contentEditable='false';saveState()};
+  ['nw','ne','sw','se'].forEach(pos=>{const h=document.createElement('div');h.className='handle '+pos;el.appendChild(h)});
+  layer.appendChild(el);
+  select(el);
+  saveState();
+}
+function delSelected(){
+  if(!selectedId)return;
+  const el=document.querySelector(`[data-oid="${selectedId}"]`);
+  if(el){el.remove();selectedId=null;saveState()}
+}
+
+// ═══ UNDO / REDO ═══
+function saveState(){history=history.slice(0,historyPos+1);history.push(deck.innerHTML);historyPos=history.length-1;if(history.length>50)history.shift()}
+function undo(){if(historyPos>0){historyPos--;restoreState()}}
+function redo(){if(historyPos<history.length-1){historyPos++;restoreState()}}
+function restoreState(){deck.innerHTML=history[historyPos];rebindSlides()}
+function rebindSlides(){
+  document.querySelectorAll('[data-slide-object]').forEach(el=>{
+    el.onmousedown=e=>{if(e.target===el||e.target.classList.contains('handle')){select(el);dragStart(e,el)}};
+    el.ondblclick=()=>{el.contentEditable='true';el.focus()};
+    el.onblur=()=>{el.contentEditable='false';saveState()};
+  });
+}
+
+// ═══ SIDEBAR ═══
+function toggleSidebar(){sidebar.style.display=sidebar.style.display==='block'?'none':'block'}
+
+// ═══ EXPORT ═══
+function exportHTML(){
+  const clone=document.documentElement.cloneNode(true);
+  clone.querySelector('#toolbar')?.remove();
+  clone.querySelector('#nav')?.remove();
+  clone.querySelector('#sidebar')?.remove();
+  const html='<!DOCTYPE html>\n'+clone.outerHTML;
+  const blob=new Blob([html],{type:'text/html'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='鲲鹏IP品牌战略.html';a.click();
+}
+
+// Keyboard
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight')next();
+  else if(e.key==='ArrowLeft')prev();
+  else if(e.key==='Delete'||e.key==='Backspace')delSelected();
+  else if((e.ctrlKey||e.metaKey)&&e.key==='z'){e.preventDefault();undo()}
+  else if((e.ctrlKey||e.metaKey)&&e.key==='y'){e.preventDefault();redo()}
+  else if((e.ctrlKey||e.metaKey)&&e.key==='s'){e.preventDefault();exportHTML()}
+});
+
+saveState();
+</script>
+</body>
+</html>
