@@ -684,6 +684,8 @@ document.addEventListener('keydown',e=>{
   else if(e.key==='b'||e.key==='B'){const c=document.getElementById('trail');c.style.display=c.style.display==='none'?'block':'none'}
   else if(e.key==='Escape'){closeDetail();go(0);}
 });
+	deck.addEventListener('wheel',function(e){e.preventDefault();this.scrollLeft+=e.deltaY},{passive:false});
+	deck.addEventListener('scroll',function(){const i=Math.round(this.scrollLeft/window.innerWidth);if(i!==idx&&i>=0&&i<total){idx=i;document.querySelectorAll('#nav .dot').forEach((d,j)=>d.classList.toggle('active',j===idx))}});
 	function openDetail(){document.getElementById('detailModal').classList.add('show')}
 	function closeDetail(){document.getElementById('detailModal').classList.remove('show')}
 	document.getElementById('detailModal').addEventListener('click',function(e){if(e.target===this)closeDetail()});
