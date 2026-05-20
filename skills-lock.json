@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-slides": {
+      "source": "zarazhangrui/frontend-slides",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "a561d9c1c048d577d26e8ab258c6dbf420024beae41c187b25e4eabedd2ba56c"
+    },
+    "frontend-slides-editable": {
+      "source": "archlizheng/frontend-slides-editable",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "8c7836564926faeff673403d01ae4d2ad7ea48ebffbf17e214cd2caab2542f93"
+    }
+  }
+}

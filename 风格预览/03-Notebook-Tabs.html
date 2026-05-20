@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Notebook Tabs 预览</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f5f1e8;--ink:#2c2416;--tab:#c4a35a;--tab-active:#8b6914}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:100vw;height:100vh;overflow:hidden;background:var(--paper);font-family:'Inter','Noto Sans SC',sans-serif;color:var(--ink);display:flex;align-items:center;justify-content:center}
+.frame{padding:clamp(40px,6vh,80px) clamp(32px,5vw,80px);max-width:800px;width:100%}
+.tabs{display:flex;gap:0;margin-bottom:clamp(20px,3vh,40px)}
+.tab{padding:clamp(6px,1vh,10px) clamp(14px,2vw,24px);border-bottom:3px solid transparent;font-size:clamp(11px,.7vw,14px);font-weight:500;color:#999;transition:.2s}
+.tab.active{border-bottom-color:var(--tab-active);color:var(--ink);font-weight:600}
+h1{font-family:'Newsreader','Noto Serif SC',serif;font-weight:500;font-size:clamp(2.5rem,5.5vw,4.5rem);line-height:1.05;margin-bottom:clamp(8px,1.5vh,16px)}
+p{font-size:clamp(14px,1vw,18px);color:#666;max-width:500px;line-height:1.5}
+.rule{width:60px;height:2px;background:var(--tab-active);margin:clamp(12px,2vh,20px) 0}
+</style></head><body>
+<div class="frame">
+  <div class="tabs">
+    <span class="tab active">品牌定位</span>
+    <span class="tab">IP世界观</span>
+    <span class="tab">产品体系</span>
+    <span class="tab">渠道商业</span>
+    <span class="tab">品牌输出</span>
+  </div>
+  <div class="rule"></div>
+  <h1>鲲鹏 IP<br>品牌战略</h1>
+  <p>深圳科技馆（光明新馆）· 从"一个馆"到"一个品牌生态"的系统化执行框架</p>
+</div>
+</body></html>

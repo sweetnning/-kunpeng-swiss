@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Electric Studio 预览</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0a0a0a;--white:#fff;--accent:#4361ee}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:100vw;height:100vh;overflow:hidden;font-family:'Manrope','Noto Sans SC',sans-serif;display:flex;flex-direction:column}
+.top{flex:1;background:var(--white);display:flex;align-items:center;justify-content:center;position:relative}
+.top .mark{position:absolute;top:30px;left:30px;width:60px;height:4px;background:var(--accent)}
+.top h1{font-family:'Manrope','Noto Sans SC',sans-serif;font-weight:800;font-size:clamp(3rem,6vw,5rem);color:var(--dark);line-height:.9;text-align:center}
+.bottom{flex:1;background:var(--dark);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:clamp(8px,1.5vh,16px)}
+.bottom .tag{font-size:clamp(10px,.7vw,13px);color:var(--accent);text-transform:uppercase;letter-spacing:.2em}
+.bottom p{font-size:clamp(16px,1.2vw,22px);color:rgba(255,255,255,.7);max-width:600px;text-align:center;line-height:1.5}
+.accent-bar{position:absolute;left:0;top:50%;width:4px;height:60px;background:var(--accent);transform:translateY(-50%)}
+</style></head><body>
+<div class="top">
+  <div class="mark"></div>
+  <h1>鲲鹏 IP<br>品牌战略</h1>
+</div>
+<div class="bottom">
+  <div class="tag">Brand Strategy · Investor Deck</div>
+  <p>深圳科技馆（光明新馆）· 从"一个馆"到"一个品牌生态"</p>
+</div>
+</body></html>
