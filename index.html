@@ -149,9 +149,9 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
         <div style="font-weight:500;font-size:max(24px,1.2vw);color:var(--accent);margin-top:1vh">5 · 品牌路径与预期</div>
         <div style="font-size:max(18px,.9vw);line-height:1.8;padding-left:1.5vw;color:var(--text-secondary)">
           <div style="cursor:pointer" onclick="go(32)">5.1&ensp;案例参考</div>
-          <div style="cursor:pointer" onclick="go(34)">5.2&ensp;效果预期</div>
-          <div style="cursor:pointer" onclick="go(35)">5.3&ensp;执行团队</div>
-          <div style="cursor:pointer" onclick="go(36)">5.4&ensp;全节点时间线</div>
+                    <div style="cursor:pointer" onclick="go(35)">5.2&ensp;执行团队</div>
+          <div style="cursor:pointer" onclick="go(36)">5.3&ensp;全节点时间线</div>
+          <div style="cursor:pointer" onclick="go(37)">5.4&ensp;展望</div>
         </div>
       </div>
     </div>
@@ -807,59 +807,37 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 
-<section class="slide " style="overflow:hidden">
+<section class="slide grey" style="overflow:hidden">
   <div class="chrome"><span>5.1 · 案例参考</span><span>28/31</span></div>
-  <div class="content" style="justify-content:flex-start;gap:2vh;flex:1">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div>
-        <h2 style="font-weight:200;color:var(--ink)">对标三星堆<em style="font-style:italic">从古老文明到未来科学</em></h2>
-        <div class="t-lead" style="font-size:max(15px,.75vw);color:var(--text-helper);margin-top:.5vh">三星堆把三千年考古变成可把玩的萌与潮，鲲鹏要把硬核科学变成可带走的故事。</div>
+  <div class="content" style="justify-content:flex-start;gap:1.5vh;flex:1">
+    <h2 style="font-weight:200;color:var(--ink)">对标三星堆<em style="font-style:italic">从古老文明到未来科学</em></h2>
+    <div class="t-lead" style="font-size:max(14px,.7vw);color:var(--text-helper)">三星堆把三千年考古变成可把玩的萌与潮，鲲鹏要把硬核科学变成可带走的故事。</div>
+    <div style="display:flex;flex-direction:column;gap:.8vh;flex:1">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5vw;padding:.8vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div><span class="t-cat">三星堆</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 三千年考古 → 人格化萌潮 · 把学术遗址变成大众愿意消费的文化符号</span></div>
+        <div><span class="t-cat" style="color:var(--accent)">鲲鹏</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 硬核科学 → 可亲近的故事 · 用鲲鹏号、科学宠物把知识变成体验</span></div>
       </div>
-      <div style="display:flex;align-items:center;gap:.5vw">
-        <span onclick="carousel(-1)" style="cursor:pointer;font-size:max(20px,1vw);color:var(--accent);user-select:none">◂</span>
-        <span style="font-size:max(12px,.6vw);color:var(--text-helper)" id="carDots"></span>
-        <span onclick="carousel(1)" style="cursor:pointer;font-size:max(20px,1vw);color:var(--accent);user-select:none">▸</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5vw;padding:.8vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div><span class="t-cat">三星堆</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 1270+ 商标全门类保护 · 青铜面具、神树、金杖各自独立授权</span></div>
+        <div><span class="t-cat" style="color:var(--accent)">鲲鹏</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 鲲鹏号 · 小科小探 · 四只宠物 · 鲲鹏学院 · 每层都是独立可授权资产</span></div>
       </div>
-    </div>
-    <div id="carouselBox" style="position:relative;flex:1">
-      <div class="car-item" style="display:grid;grid-template-columns:1fr 1fr;gap:2vw;height:100%">
-        <div class="card" style="background:var(--paper)"><div class="t-cat">三星堆</div><h4>内容翻译</h4><p>三千年考古 → 人格化萌潮 · 把学术遗址变成大众愿意消费的文化符号</p></div>
-        <div class="card" style="background:var(--paper)"><div class="t-cat" style="color:var(--accent)">鲲鹏</div><h4>内容翻译</h4><p>硬核科学 → 可亲近的故事 · 用鲲鹏号、科学宠物把知识变成体验</p></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5vw;padding:.8vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div><span class="t-cat">三星堆</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 从四川遗址 → 外交部国礼 · 地方文化符号升级为国家名片</span></div>
+        <div><span class="t-cat" style="color:var(--accent)">鲲鹏</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 深圳科技馆 → 湾区符号 → 国家科创 IP · 锚定"深圳城市文化名片"起步</span></div>
       </div>
-      <div class="car-item" style="display:none;grid-template-columns:1fr 1fr;gap:2vw;height:100%">
-        <div class="card" style="background:var(--paper)"><div class="t-cat">三星堆</div><h4>IP 矩阵</h4><p>1270+ 商标全门类保护 · 青铜面具、神树、金杖各自独立授权</p></div>
-        <div class="card" style="background:var(--paper)"><div class="t-cat" style="color:var(--accent)">鲲鹏</div><h4>IP 矩阵</h4><p>鲲鹏号 · 小科小探 · 四只宠物 · 鲲鹏学院 · 每层都是独立可授权资产</p></div>
-      </div>
-      <div class="car-item" style="display:none;grid-template-columns:1fr 1fr;gap:2vw;height:100%">
-        <div class="card" style="background:var(--paper)"><div class="t-cat">三星堆</div><h4>国家级跃迁</h4><p>从四川遗址 → 外交部国礼 · 地方文化符号升级为国家名片</p></div>
-        <div class="card" style="background:var(--paper)"><div class="t-cat" style="color:var(--accent)">鲲鹏</div><h4>国家级跃迁</h4><p>深圳科技馆 → 湾区符号 → 国家科创 IP · 锚定"深圳城市文化名片"起步</p></div>
-      </div>
-      <div class="car-item" style="display:none;grid-template-columns:1fr 1fr;gap:2vw;height:100%">
-        <div class="card" style="background:var(--paper)"><div class="t-cat">三星堆</div><h4>文创逻辑</h4><p>不卖"文物复制品" · 卖的是"把三千年的神秘戴在身上"</p></div>
-        <div class="card" style="background:var(--paper)"><div class="t-cat" style="color:var(--accent)">鲲鹏</div><h4>文创逻辑</h4><p>不卖"科普教材" · 卖的是"把科学精神带回家"</p></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5vw;padding:.8vh 0">
+        <div><span class="t-cat">三星堆</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 不卖"文物复制品" · 卖的是"把三千年的神秘戴在身上"</span></div>
+        <div><span class="t-cat" style="color:var(--accent)">鲲鹏</span><span style="font-size:max(13px,.68vw);color:var(--text-secondary)"> 不卖"科普教材" · 卖的是"把科学精神带回家"</span></div>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="slide ">
-  <div class="chrome"><span>5.2 · 效果预期</span><span>29/31</span></div>
-  <div class="content" style="justify-content:center">
-    <h2>三年后，鲲鹏站在哪</h2>
-    <div class="rule accent" style="margin:2vh 0 4vh"></div>
-    <div class="grid-4" style="gap:2vw">
-      <div class="card" style="text-align:center"><div class="big-num anim-scale anim-d1">TOP 3</div><h4>品牌层</h4><p>认知度进入深圳文化地标前三</p></div>
-      <div class="card" style="text-align:center"><div class="big-num anim-scale anim-d2">千万级</div><h4>产品层</h4><p>年销售额目标</p></div>
-      <div class="card" style="text-align:center"><div class="big-num anim-scale anim-d3">20+</div><h4>研学层</h4><p>签约学校</p></div>
-      <div class="card" style="text-align:center"><div class="big-num anim-scale anim-d4">50万+</div><h4>体验层</h4><p>快闪店单店年客流</p></div>
-    </div>
-  </div>
-</section>
 
 
 <section class="slide grey">
-  <div class="chrome"><span>5.3 · 执行团队</span><span>30/31</span></div>
+  <div class="chrome"><span>5.2 · 执行团队</span><span>29/31</span></div>
   <div class="content" style="justify-content:center">
     <h2>谁来干，什么时候</h2>
     <div class="rule accent" style="margin:2vh 0 3vh"></div>
@@ -886,7 +864,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide ">
-  <div class="chrome"><span>5.4 · 全节点时间线</span><span>31/31</span></div>
+  <div class="chrome"><span>5.3 · 全节点时间线</span><span>30/31</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>鲲鹏 IP · 18个月全节点时间线</h2>
     
@@ -922,6 +900,34 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 
+
+
+<section class="slide ">
+  <div class="chrome"><span>5.4 · 展望</span><span>31/31</span></div>
+  <div class="content" style="justify-content:center;align-items:center;text-align:center;gap:4vh;max-width:56ch;margin:0 auto">
+    <div>
+      <h1 class="h-accent" style="font-size:min(5vw,9vh);font-weight:200;color:var(--ink);margin-bottom:1vh">鲲鹏，不止于馆</h1>
+      <div class="rule accent" style="width:50%;margin:2vh auto"></div>
+      <div class="t-lead" style="font-size:max(16px,.8vw);color:var(--text-helper)">从一方展厅，到万里鹏程</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3vh;text-align:left;width:100%">
+      <div style="display:flex;gap:2vw;align-items:flex-start">
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(3vw,5vh);line-height:.9;color:var(--accent);flex-shrink:0">01</div>
+        <div><h4 style="font-weight:500;margin-bottom:.5vh">扎根场馆</h4><p style="font-size:max(15px,.75vw);line-height:1.7;color:var(--text-secondary)">它从深圳科技馆的展厅起步，是孩子长大后还记得的科学童年。让科普不只是一次短暂的参观，更是伴随成长的长久精神印记。</p></div>
+      </div>
+      <div style="display:flex;gap:2vw;align-items:flex-start">
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(3vw,5vh);line-height:.9;color:var(--accent);flex-shrink:0">02</div>
+        <div><h4 style="font-weight:500;margin-bottom:.5vh">锚定城市</h4><p style="font-size:max(15px,.75vw);line-height:1.7;color:var(--text-secondary)">它将打破展厅的物理边界，成为大湾区科创文化符号，是深圳创新精神的物化象征。把深圳的科创基因，转化为可触摸、可传播的城市文化标识。</p></div>
+      </div>
+      <div style="display:flex;gap:2vw;align-items:flex-start">
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(3vw,5vh);line-height:.9;color:var(--accent);flex-shrink:0">03</div>
+        <div><h4 style="font-weight:500;margin-bottom:.5vh">面向世界</h4><p style="font-size:max(15px,.75vw);line-height:1.7;color:var(--text-secondary)">它最终将成长为中国科技 IP 的南方标杆，是深圳递给世界的科技名片。从湾区走向全球，成为代表中国科创力量的文化输出载体。</p></div>
+      </div>
+    </div>
+    <div class="rule" style="width:30%;margin:2vh auto"></div>
+    <div class="t-lead" style="font-size:max(16px,.8vw);color:var(--text-helper);text-align:center;font-style:italic">展厅是起点，绝非边界。<br>从光明的地层深处起航，鲲鹏的征途，是更广阔的天地。</div>
+  </div>
+</section>
 
 
 <section class="slide accent">
