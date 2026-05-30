@@ -48,7 +48,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-6)}
 .table-row{display:grid;gap:var(--sp-5);padding:2.2vh 0;border-bottom:1px solid var(--border-subtle);align-items:start}
 .table-row:first-of-type{border-bottom:2px solid var(--border-strong);padding-bottom:1.8vh}
-.hdr{font-family:var(--mono);font-size:max(18px,.58vw);color:var(--text-helper);letter-spacing:.1em;text-transform:uppercase}
+.hdr{font-family:var(--mono);font-size:max(18px,.58vw);color:var(--ink);letter-spacing:.1em;text-transform:uppercase}
 .cell{font-size:max(22px,.92vw);line-height:1.5;font-weight:300}
 .cell strong{font-weight:500}
 .cell.accent{color:var(--accent);font-weight:500}
@@ -142,17 +142,18 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
       <div style="display:flex;flex-direction:column;gap:.5vh">
         <div style="font-weight:500;font-size:max(23px,1.15vw);color:var(--accent)">4 · 品牌治理</div>
         <div style="font-size:max(17px,.85vw);line-height:1.5;padding-left:1.2vw;color:var(--text-secondary)">
-          <div style="cursor:pointer" onclick="go(28)">4.1&ensp;品牌管理三级权责体系</div>
-          <div style="cursor:pointer" onclick="go(29)">4.2&ensp;品牌手册</div>
-          <div style="cursor:pointer" onclick="go(31)">4.3&ensp;品牌的边界与红线</div>
-          <div style="cursor:pointer" onclick="go(32)">4.4&ensp;风险预案</div>
+          <div style="cursor:pointer" onclick="go(28)">4.1&ensp;IP智囊团专家矩阵</div>
+          <div style="cursor:pointer" onclick="go(29)">4.2&ensp;品牌管理三级权责体系</div>
+          <div style="cursor:pointer" onclick="go(30)">4.3&ensp;品牌手册</div>
+          <div style="cursor:pointer" onclick="go(32)">4.4&ensp;品牌的边界与红线</div>
+          <div style="cursor:pointer" onclick="go(33)">4.5&ensp;风险预案</div>
         </div>
-        <div style="font-weight:500;font-size:max(23px,1.15vw);color:var(--accent);margin-top:2vh">5 · 品牌执行</div>
+        <div style="font-weight:500;font-size:max(23px,1.15vw);color:var(--accent);margin-top:.8vh">5 · 品牌执行</div>
         <div style="font-size:max(17px,.85vw);line-height:1.5;padding-left:1.2vw;color:var(--text-secondary)">
-          <div style="cursor:pointer" onclick="go(34)">5.1&ensp;案例参考</div>
-          <div style="cursor:pointer" onclick="go(36)">5.2&ensp;执行团队</div>
-          <div style="cursor:pointer" onclick="go(37)">5.3&ensp;全节点时间线</div>
-          <div style="cursor:pointer" onclick="go(38)">5.4&ensp;展望</div>
+          <div style="cursor:pointer" onclick="go(35)">5.1&ensp;案例参考</div>
+          <div style="cursor:pointer" onclick="go(37)">5.2&ensp;执行团队</div>
+          <div style="cursor:pointer" onclick="go(38)">5.3&ensp;全节点时间线</div>
+          <div style="cursor:pointer" onclick="go(39)">5.4&ensp;展望</div>
         </div>
       </div>
     </div>
@@ -160,13 +161,13 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>1.1 · 品牌目标</span><span>1/33</span></div>
+  <div class="chrome"><span>1.1 · 品牌目标</span><span>1/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">WHY A BRAND</div>
     <h1 class="h-accent anim-fadeup">不是<em style="color:var(--accent)">"又一个科技馆"</em></h1>
     <div style="display:flex;flex-direction:column;gap:1.8vh;margin-top:3vh">
       <div class="t-lead">深圳创新精神的<strong style="font-weight:500">物化载体</strong></div>
-      <div class="t-lead">中国科技馆的<strong style="font-weight:500">南方范式</strong></div>
+      <div class="t-lead">中国科技馆领域的<strong style="font-weight:500">南方范式</strong></div>
       <div class="rule accent" style="margin:1.5vh 0;width:60%"></div>
       <div class="t-lead">光有建筑不够——需要一个能被人<strong style="font-weight:500">带走、记住、传开</strong>的文化符号。</div>
       <div class="t-lead">品牌是科技馆在观众心里的<strong style="font-weight:500;color:var(--accent)">"第二栋楼"</strong>。</div>
@@ -175,32 +176,32 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>1.1a · 品牌价值金字塔</span><span>2/33</span></div>
+  <div class="chrome"><span>1.1a · 品牌价值金字塔</span><span>2/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">VALUE PYRAMID</div>
-    <h2>构建三层价值</h2>
+    <h2>品牌价值金字塔——三层价值 · 由认知到认同</h2>
     <div class="rule accent" style="margin:3vh 0 5vh;width:40%"></div>
-    <div style="display:flex;flex-direction:column;gap:3vh;max-width:48ch;margin:0 auto">
-      <div style="display:flex;align-items:center;gap:2vw">
-        <div style="width:clamp(50px,4vw,70px);height:clamp(50px,4vw,70px);border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--sans);font-weight:200;font-size:min(2vw,3.5vh);color:var(--accent)">03</span></div>
-        <div><div style="font-weight:500;font-size:max(23px,1.15vw);color:var(--accent);margin-bottom:.5vh">城市精神象征</div><div style="font-size:max(16px,.82vw);color:var(--text-helper)">认同层</div></div>
+    <div style="display:flex;flex-direction:column;gap:3vh;max-width:52ch;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:2vw;cursor:pointer" onclick="var m=this.querySelector('.more');m.classList.toggle('open')">
+        <div style="width:clamp(50px,4vw,70px);height:clamp(50px,4vw,70px);border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--sans);font-weight:200;font-size:min(2vw,3.5vh);color:var(--accent);font-weight:500">03</span></div>
+        <div><div style="font-weight:500;font-size:max(22px,1.1vw);color:var(--accent);margin-bottom:.5vh">城市精神象征 · B2G</div><div style="font-size:max(16px,.82vw);color:var(--text-helper)">认同层</div><div class="more" style="max-height:0;overflow:hidden;transition:max-height .4s ease"><div style="padding-top:1vh;font-size:max(14px,.7vw);line-height:1.6;color:var(--text-secondary);padding-left:0">升华为城市未来精神的情感坐标，成为市民自豪感与认同感的载体。<br><strong>对应受众：</strong>全体市民 / 政府 / 媒体</div></div></div>
       </div>
       <div style="height:2vh;border-left:1px solid var(--border-strong);margin-left:clamp(24px,1.9vw,34px)"></div>
-      <div style="display:flex;align-items:center;gap:2vw">
-        <div style="width:clamp(50px,4vw,70px);height:clamp(50px,4vw,70px);border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--sans);font-weight:200;font-size:min(2vw,3.5vh);color:var(--accent)">02</span></div>
-        <div><div style="font-weight:500;font-size:max(23px,1.15vw);color:var(--accent);margin-bottom:.5vh">科技创新认证</div><div style="font-size:max(16px,.82vw);color:var(--text-helper)">信任层</div></div>
+      <div style="display:flex;align-items:center;gap:2vw;cursor:pointer" onclick="var m=this.querySelector('.more');m.classList.toggle('open')">
+        <div style="width:clamp(50px,4vw,70px);height:clamp(50px,4vw,70px);border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--sans);font-weight:200;font-size:min(2vw,3.5vh);color:var(--accent);font-weight:500">02</span></div>
+        <div><div style="font-weight:500;font-size:max(22px,1.1vw);color:var(--accent);margin-bottom:.5vh">科技创新认证 · B2B</div><div style="font-size:max(16px,.82vw);color:var(--text-helper)">信任层</div><div class="more" style="max-height:0;overflow:hidden;transition:max-height .4s ease"><div style="padding-top:1vh;font-size:max(14px,.7vw);line-height:1.6;color:var(--text-secondary);padding-left:0">构建城市创新实力的认证平台，成为连接科技与公众的信任纽带。<br><strong>对应受众：</strong>企业 / 产业 / 行业</div></div></div>
       </div>
       <div style="height:2vh;border-left:1px solid var(--border-strong);margin-left:clamp(24px,1.9vw,34px)"></div>
-      <div style="display:flex;align-items:center;gap:2vw">
-        <div style="width:clamp(50px,4vw,70px);height:clamp(50px,4vw,70px);border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--sans);font-weight:200;font-size:min(2vw,3.5vh);color:var(--accent)">01</span></div>
-        <div><div style="font-weight:500;font-size:max(23px,1.15vw);color:var(--accent);margin-bottom:.5vh">科普教育入口</div><div style="font-size:max(16px,.82vw);color:var(--text-helper)">流量层</div></div>
+      <div style="display:flex;align-items:center;gap:2vw;cursor:pointer" onclick="var m=this.querySelector('.more');m.classList.toggle('open')">
+        <div style="width:clamp(50px,4vw,70px);height:clamp(50px,4vw,70px);border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-family:var(--sans);font-weight:200;font-size:min(2vw,3.5vh);color:var(--accent);font-weight:500">01</span></div>
+        <div><div style="font-weight:500;font-size:max(22px,1.1vw);color:var(--accent);margin-bottom:.5vh">科普教育入口 · B2C</div><div style="font-size:max(16px,.82vw);color:var(--text-helper)">流量层</div><div class="more" style="max-height:0;overflow:hidden;transition:max-height .4s ease"><div style="padding-top:1vh;font-size:max(14px,.7vw);line-height:1.6;color:var(--text-secondary);padding-left:0">以鲲鹏号的沉浸式登船体验为引力核心，让公众因为一个故事走进来，因为一次探索留下来。<br><strong>对应受众：</strong>学生 / 亲子 / 游客</div></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>1.1b · 制度资产</span><span>3/33</span></div>
+  <div class="chrome"><span>1.1b · 制度资产</span><span>3/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">INSTITUTIONAL ASSETS</div>
     <h2>为品牌建立权威背书</h2>
@@ -226,7 +227,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome" style="padding-left:clamp(210px,19vw,290px)"><span>1.2 · 鲲鹏与深圳</span><span>4/33</span></div>
+  <div class="chrome" style="padding-left:clamp(210px,19vw,290px)"><span>1.2 · 鲲鹏与深圳</span><span>4/34</span></div>
   <div style="position:absolute;left:0;top:0;bottom:0;width:clamp(200px,18vw,280px);background:var(--accent);pointer-events:none"></div>
   <div class="content" style="justify-content:center;gap:3vh;padding-left:clamp(210px,19vw,290px)">
     <div class="t-meta" style="margin-bottom:0">BRAND FOUNDATION</div>
@@ -273,7 +274,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>1.3 · 鲲鹏品牌世界观</span><span>5/33</span></div>
+  <div class="chrome"><span>1.3 · 鲲鹏品牌世界观</span><span>5/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>鲲鹏品牌世界观</h2>
     <div class="rule accent" style="margin:2vh 0 2vh"></div>
@@ -291,7 +292,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide dark">
-  <div class="chrome"><span>1.4 · 起源</span><span>6/33</span></div>
+  <div class="chrome"><span>1.4 · 起源</span><span>6/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">CHAPTER 1</div>
     <h1 class="h-accent" style="font-size:min(4.5vw,9vh);font-weight:200;color:#fff">很久以前，一艘飞船<em>坠落在<em style="color:var(--accent-bright)">深圳光明</em></em></h1>
@@ -306,7 +307,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide dark">
-  <div class="chrome"><span>1.4 · 唤醒</span><span>7/33</span></div>
+  <div class="chrome"><span>1.4 · 唤醒</span><span>7/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">CHAPTER 2</div>
     <h1 class="h-accent" style="font-size:min(4.5vw,9vh);font-weight:200;color:#fff"><em>城市创新脉冲</em>，触发了<em style="color:var(--accent-bright)">鲲鹏号</em></h1>
@@ -320,7 +321,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>1.4 · 登船</span><span>8/33</span></div>
+  <div class="chrome"><span>1.4 · 登船</span><span>8/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">CHAPTER 3</div>
     <h2>指令长科博士，领航员探博士登船</h2>
@@ -340,7 +341,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>1.4 · 集结</span><span>9/33</span></div>
+  <div class="chrome"><span>1.4 · 集结</span><span>9/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">CHAPTER 4</div>
     <h2>四个知识域，四只科学宠物</h2>
@@ -365,7 +366,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>1.4 · 探索</span><span>10/33</span></div>
+  <div class="chrome"><span>1.4 · 探索</span><span>10/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">CHAPTER 5</div>
     <h2>四个知识域，逐一解锁</h2>
@@ -383,7 +384,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide grey">
-  <div class="chrome"><span>1.5 · 品牌系统总览</span><span>11/33</span></div>
+  <div class="chrome"><span>1.5 · 品牌系统总览</span><span>11/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>品牌系统工程：<em style="font-style:italic;font-weight:200">点 · 线 · 面</em></h2>
     <div class="rule accent" style="margin:2vh 0 4vh"></div>
@@ -408,7 +409,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>2.1 · 产品商业化矩阵</span><span>12/33</span></div>
+  <div class="chrome"><span>2.1 · 产品商业化矩阵</span><span>12/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>鲲鹏好礼——让每个产品讲一个鲲鹏故事</h2>
     <div class="rule accent" style="margin:2vh 0 2vh"></div>
@@ -465,7 +466,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>2.2 · 鲲鹏学院</span><span>13/33</span></div>
+  <div class="chrome"><span>2.2 · 鲲鹏学院</span><span>13/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>现有研学体系：深圳科创科普教育的坚实底座</h2>
     <div class="rule accent" style="margin:2vh 0 2vh"></div>
@@ -480,7 +481,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>2.2 · 鲲鹏学院</span><span>14/33</span></div>
+  <div class="chrome"><span>2.2 · 鲲鹏学院</span><span>14/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>鲲鹏学院：现有研学体系的品牌化进阶升级</h2>
     <div class="rule accent" style="margin:2vh 0 2vh"></div>
@@ -500,7 +501,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>2.3 · 数字互动</span><span>15/33</span></div>
+  <div class="chrome"><span>2.3 · 数字互动</span><span>15/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>数字互动——让鲲鹏在屏幕里活起来</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -513,7 +514,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>2.4 · 影视内容</span><span>16/33</span></div>
+  <div class="chrome"><span>2.4 · 影视内容</span><span>16/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>影视内容——用故事让科学插上翅膀</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -527,7 +528,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide ">
-  <div class="chrome"><span>2.5 · 全馆空间鲲鹏化</span><span>17/33</span></div>
+  <div class="chrome"><span>2.5 · 全馆空间鲲鹏化</span><span>17/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>整座科技馆，就是鲲鹏号</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -554,7 +555,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>3.1 · 成熟产品标准化输出</span><span>18/33</span></div>
+  <div class="chrome"><span>3.1 · 成熟产品标准化输出</span><span>18/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>成熟产品标准化输出——馆内跑通资产的对外可复制落地</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -568,7 +569,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>3.2 · 主题空间形态输出</span><span>19/33</span></div>
+  <div class="chrome"><span>3.2 · 主题空间形态输出</span><span>19/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>主题空间形态输出——打破场馆物理边界的可复制空间产品</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -581,7 +582,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>3.3 · 品牌传播</span><span>20/33</span></div>
+  <div class="chrome"><span>3.3 · 品牌传播</span><span>20/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>"节、庆、展、演、赛"多元营销矩阵</h2>
     <div class="t-lead" style="font-size:max(14px,.7vw);color:var(--text-helper)">全圈层品牌破圈与渗透路径</div>
@@ -597,7 +598,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>3.3a · 品牌大赛</span><span>21/33</span></div>
+  <div class="chrome"><span>3.3a · 品牌大赛</span><span>21/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>品牌大赛——用创意为鲲鹏注入新能量</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -617,7 +618,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>3.3b · 数字传播</span><span>22/33</span></div>
+  <div class="chrome"><span>3.3b · 数字传播</span><span>22/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>年轻化数字传播策略——社交货币日常渗透</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -629,7 +630,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>3.4 · 品牌联动与IP授权</span><span>23/33</span></div>
+  <div class="chrome"><span>3.4 · 品牌联动与IP授权</span><span>23/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>品牌联动与IP授权——品牌价值放大与市场化通路</h2>
     <div class="rule accent" style="margin:2vh 0 4vh;width:40%"></div>
@@ -657,7 +658,22 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>4.1 · 品牌管理三级权责体系</span><span>24/33</span></div>
+  <div class="chrome"><span>4.1 · IP智囊团专家矩阵</span><span>24/34</span></div>
+  <div class="content" style="justify-content:center">
+    <h2>IP智囊团专家矩阵——专业的力量做专业的事</h2>
+    <div class="rule accent" style="margin:2vh 0 3vh;width:40%"></div>
+    <div style="overflow-x:auto">
+      <div class="table-row" style="grid-template-columns:1fr 4fr"><div class="hdr">层级</div><div class="hdr">战略支撑价值</div></div>
+      <div class="table-row" style="grid-template-columns:1fr 4fr"><div class="cell accent">科学权威层</div><div class="cell"><strong style="color:var(--ink)">品牌最高科学准则的制定者。</strong>负责全品类内容的科学源头把关、学术权威背书，分专业出具审核意见，保障所有输出内容的科学严谨性。</div></div>
+      <div class="table-row" style="grid-template-columns:1fr 4fr"><div class="cell accent">战略顶层</div><div class="cell"><strong style="color:var(--ink)">品牌战略方向的顶层把控者。</strong>注入国家级文博IP产业化成熟方法论，提供品牌体系搭建、IP合规运营、行业顶层资源对接的核心支撑。</div></div>
+      <div class="table-row" style="grid-template-columns:1fr 4fr"><div class="cell accent">产业赋能层</div><div class="cell"><strong style="color:var(--ink)">品牌商业化落地的专业指导者。</strong>提供从产品策划、打样生产到渠道落地的全链条专业指导，完成IP内容从概念到可落地、可复制产品的转化。</div></div>
+      <div class="table-row" style="grid-template-columns:1fr 4fr"><div class="cell accent">传播指导层</div><div class="cell"><strong style="color:var(--ink)">品牌声量放大的专业支撑者。</strong>负责品牌年度事件、展陈活动、影视内容、全渠道传播的创意指导与资源对接，保障品牌声量持续、精准触达。</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide ">
+  <div class="chrome"><span>4.2 · 品牌管理三级权责体系</span><span>25/34</span></div>
   <div class="content" style="justify-content:center">
     <div class="t-cat">GOVERNANCE</div>
     <h2>品牌管理三级权责体系</h2>
@@ -675,7 +691,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>4.2 · 品牌手册</span><span>25/33</span></div>
+  <div class="chrome"><span>4.3 · 品牌手册</span><span>26/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>品牌手册——所有人讲同一个故事</h2>
     <div class="rule accent" style="margin:2vh 0 3vh;width:40%"></div>
@@ -714,7 +730,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>4.2 · 品牌手册</span><span>26/33</span></div>
+  <div class="chrome"><span>4.3 · 品牌手册</span><span>27/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>品牌手册——所有人讲同一个故事</h2>
     <div class="rule accent" style="margin:2vh 0 3vh;width:40%"></div>
@@ -752,7 +768,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide grey">
-  <div class="chrome"><span>4.3 · 品牌的边界与红线</span><span>27/33</span></div>
+  <div class="chrome"><span>4.4 · 品牌的边界与红线</span><span>28/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>品牌的边界与红线</h2>
     <div class="t-lead" style="font-size:max(18px,.9vw);margin-bottom:1vh"><strong style="color:var(--accent)">科学真实是我们的最高宪法。</strong></div>
@@ -784,7 +800,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>4.4 · 风险预案</span><span>28/33</span></div>
+  <div class="chrome"><span>4.5 · 风险预案</span><span>29/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>风险预案</h2>
     <div class="rule accent" style="margin:2vh 0 3vh"></div>
@@ -826,7 +842,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 </section>
 
 <section class="slide ">
-  <div class="chrome"><span>5.1 · 案例参考</span><span>29/33</span></div>
+  <div class="chrome"><span>5.1 · 案例参考</span><span>30/34</span></div>
   <div class="content" style="justify-content:center">
     <h2>三星堆 IP 案例一览</h2>
     <div class="rule accent" style="margin:2vh 0 3vh;width:40%"></div>
@@ -853,7 +869,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide grey" style="overflow:hidden">
-  <div class="chrome"><span>5.1 · 案例参考</span><span>30/33</span></div>
+  <div class="chrome"><span>5.1 · 案例参考</span><span>31/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:1.5vh;flex:1">
     <h2>对标三星堆——品牌产业化体系全维度对标</h2>
     <div class="rule accent" style="margin:1vh 0 1.5vh;width:40%"></div>
@@ -883,7 +899,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide grey">
-  <div class="chrome"><span>5.2 · 执行团队</span><span>31/33</span></div>
+  <div class="chrome"><span>5.2 · 执行团队</span><span>32/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:1.5vh">
     <h2>执行团队——8 个工作组，全链条覆盖</h2>
     <div class="rule accent" style="margin:1vh 0 2vh;width:40%"></div>
@@ -906,7 +922,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide ">
-  <div class="chrome"><span>5.3 · 全节点时间线</span><span>32/33</span></div>
+  <div class="chrome"><span>5.3 · 全节点时间线</span><span>33/34</span></div>
   <div class="content" style="justify-content:flex-start;gap:2vh">
     <h2>鲲鹏 IP · 18个月全节点时间线</h2>
     
@@ -945,7 +961,7 @@ h3{font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(15px,1.3
 
 
 <section class="slide ">
-  <div class="chrome"><span>5.4 · 展望</span><span>33/33</span></div>
+  <div class="chrome"><span>5.4 · 展望</span><span>34/34</span></div>
   <div class="content" style="justify-content:center;align-items:center;text-align:center;gap:4vh;max-width:56ch;margin:0 auto">
     <div>
       <h1 class="h-accent" style="font-size:min(5vw,9vh);font-weight:400;color:var(--ink);margin-bottom:1vh">鲲鹏，不止于馆</h1>
